@@ -1,0 +1,49 @@
+import React from 'react';
+import { Section } from '../ui/Section';
+import { siteConfig } from '../../data/site-data';
+
+export const Team: React.FC = () => {
+  return (
+    <Section
+      id="team"
+      className="bg-slate-50"
+      title="Meet Our Team"
+      subtitle="Our team of security experts and developers are dedicated to protecting your digital assets and accelerating your growth."
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {siteConfig.team.map((member, index) => (
+          <div 
+            key={index}
+            className="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md group"
+          >
+            <div className="aspect-[4/3] overflow-hidden">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+              <p className="text-blue-600 font-medium text-sm mb-3">{member.role}</p>
+              <p className="text-slate-600 text-sm">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-16 text-center">
+        <div className="inline-block bg-blue-100 text-blue-800 font-medium text-sm py-2 px-4 rounded-full mb-4">
+          Join Our Team
+        </div>
+        <h3 className="text-2xl font-bold mb-4">We're Always Looking for Talent</h3>
+        <p className="text-slate-600 max-w-2xl mx-auto mb-6">
+          Are you passionate about cybersecurity and development? Join our team of experts and help build secure solutions for our clients.
+        </p>
+        <button className="bg-slate-800 hover:bg-slate-900 text-white font-medium py-3 px-6 rounded-md transition-colors">
+          View Open Positions
+        </button>
+      </div>
+    </Section>
+  );
+};
