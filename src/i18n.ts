@@ -120,6 +120,26 @@ const resources = {
         }
       },
       
+      // Internship Offers Section
+      internship: {
+        title: 'Internship Programs',
+        subtitle: 'Join our internship programs and kickstart your career in technology with hands-on experience and professional growth opportunities.',
+        months: 'months',
+        duration: 'Duration',
+        perMonth: 'total',
+        mostPopular: 'Most Popular',
+        applyNow: 'Apply Now',
+        features: {
+          internship: 'Hands-on internship in your field',
+          certification: 'International certification upon completion',
+          attestation: 'Internship attestation letter',
+        },
+        note: {
+          title: 'Flexible Duration',
+          description: 'Choose the internship duration that fits your schedule and learning goals.'
+        }
+      },
+      
       // Testimonials Section
       testimonials: {
         title: 'Client Testimonials',
@@ -304,6 +324,26 @@ const resources = {
             sunday: 'Dimanche',
             closed: 'Fermé'
           }
+        }
+      },
+      
+      // Internship Offers Section
+      internship: {
+        title: 'Offres de Stage',
+        subtitle: 'Rejoignez nos programmes de stage et lancez votre carrière dans la technologie avec une expérience pratique et des opportunités de développement professionnel.',
+        months: 'mois',
+        duration: 'Durée',
+        perMonth: 'total',
+        mostPopular: 'Le Plus Populaire',
+        applyNow: 'Postuler Maintenant',
+        features: {
+          internship: 'Stage pratique dans votre domaine',
+          certification: 'Certification internationale à la fin du stage',
+          attestation: 'Attestation de stage',
+        },
+        note: {
+          title: 'Durée Flexible',
+          description: 'Choisissez la durée de stage qui correspond à votre emploi du temps et à vos objectifs d\'apprentissage.'
         }
       },
       
