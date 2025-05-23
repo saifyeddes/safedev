@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../ui/Container';
 import { Button } from '../ui/Button';
 import { Shield, ChevronRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section 
       id="home" 
@@ -20,34 +22,40 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <div className="inline-flex items-center justify-center p-2 glass-effect rounded-full mb-6 slide-in-left">
             <Shield className="h-6 w-6 text-blue-500 mr-2" />
-            <span className="text-sm font-medium text-blue-300">Security at the speed of development</span>
+            <span className="text-sm font-medium text-blue-300">
+              {t('hero.tagline')}
+            </span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
-            <span className="block slide-up mb-4">Secure Your Digital Future</span>
-            <span className="block gradient-text slide-up animate-delay-200 mt-2">With SAFEDEV</span>
+            <span className="block slide-up mb-4">{t('hero.title1')}</span>
+            <span className="block gradient-text slide-up animate-delay-200 mt-2">
+              {t('hero.title2')}
+            </span>
           </h1>
           
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 slide-up animate-delay-300">
-            We combine cutting-edge security practices with modern development methodologies to deliver robust, resilient digital solutions for forward-thinking organizations.
+            {t('hero.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 slide-up animate-delay-400">
+            <a href="#services">
             <Button size="lg" className="group hover-lift">
-              Get Started
+              {t('hero.ctaPrimary')}
               <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
+          </a>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover-lift">
-              Learn More
+              {t('hero.ctaSecondary')}
             </Button>
           </div>
           
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '5+', label: 'Years Experience' },
-              { value: '250+', label: 'Projects Secured' },
-              { value: '99.9%', label: 'Client Satisfaction' },
-              { value: '24/7', label: 'Support Available' }
+              { value: '5+', label: t('hero.stats.experience') },
+              { value: '250+', label: t('hero.stats.projects') },
+              { value: '99.9%', label: t('hero.stats.satisfaction') },
+              { value: '24/7', label: t('hero.stats.support') }
             ].map((stat, index) => (
               <div key={index} className={`flex flex-col items-center scale-in animate-delay-${(index + 1) * 100}`}>
                 <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>

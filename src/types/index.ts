@@ -4,8 +4,7 @@ export interface NavItem {
 }
 
 export interface Service {
-  title: string;
-  description: string;
+  key: string;
   icon: string;
 }
 

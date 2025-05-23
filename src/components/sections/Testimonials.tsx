@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Section } from '../ui/Section';
 import { siteConfig } from '../../data/site-data';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 export const Testimonials: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
+  const [activeIndex, setActiveIndex] = React.useState(0);
   const testimonials = siteConfig.testimonials;
 
   const nextTestimonial = () => {
@@ -19,8 +21,8 @@ export const Testimonials: React.FC = () => {
     <Section
       id="testimonials"
       className="bg-gradient-to-br from-slate-900 to-blue-900 text-white"
-      title="Client Testimonials"
-      subtitle="Hear what our clients have to say about our security and development solutions."
+      title={t('testimonials.title')}
+      subtitle={t('testimonials.subtitle')}
     >
       <div className="relative max-w-4xl mx-auto">
         <div className="absolute -left-8 top-1/2 -translate-y-1/2 z-10">

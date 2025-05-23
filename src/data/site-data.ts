@@ -14,23 +14,19 @@ export const siteConfig = {
   },
   services: [
     {
-      title: 'Secure Software Development',
-      description: 'Custom-built software solutions with security integrated from day one. We build with a security-first mindset.',
+      key: 'secureDev',
       icon: 'shield',
     },
     {
-      title: 'Security Audits',
-      description: 'Comprehensive analysis of your existing systems to identify and remediate security vulnerabilities.',
+      key: 'securityAudits',
       icon: 'search',
     },
     {
-      title: 'DevSecOps Implementation',
-      description: 'Integrate security practices throughout your development pipeline for continuous protection.',
+      key: 'devSecOps',
       icon: 'refresh-cw',
     },
     {
-      title: 'Incident Response',
-      description: '24/7 support to quickly address and mitigate security breaches when they occur.',
+      key: 'incidentResponse',
       icon: 'siren',
     },
   ] as Service[],

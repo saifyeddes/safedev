@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../ui/Container';
 import { Button } from '../ui/Button';
 import { Shield, Menu, X } from 'lucide-react';
 import { siteConfig } from '../../data/site-data';
+import ReactCountryFlag from 'react-country-flag';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('i18nextLng', lng);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,10 +46,36 @@ export const Navbar: React.FC = () => {
                 isScrolled ? 'text-slate-900' : 'text-white'
               }`}
             >
-              {item.label}
+              {t(`nav.${item.label.toLowerCase()}`)}
             </a>
           ))}
-          <Button>Get Started</Button>
+          <div className="flex items-center space-x-4">
+            <button 
+              onClick={() => changeLanguage('en')} 
+              className={`p-1 rounded-full ${i18n.language && (i18n.language === 'en' || i18n.language.startsWith('en-')) ? 'ring-2 ring-blue-500' : ''}`}
+              title="English"
+            >
+              <ReactCountryFlag 
+                countryCode="US" 
+                svg 
+                className="w-6 h-6 rounded-full"
+              />
+            </button>
+            <button 
+              onClick={() => changeLanguage('fr')} 
+              className={`p-1 rounded-full ${i18n.language && (i18n.language === 'fr' || i18n.language.startsWith('fr-')) ? 'ring-2 ring-blue-500' : ''}`}
+              title="Français"
+            >
+              <ReactCountryFlag 
+                countryCode="FR" 
+                svg 
+                className="w-6 h-6 rounded-full"
+              />
+            </button>
+          </div>
+          <a href="#services">
+            <Button>{t('common.getStarted')}</Button>
+          </a>
         </nav>
         
         <button
@@ -69,10 +103,34 @@ export const Navbar: React.FC = () => {
                   className="text-slate-900 font-medium hover:text-blue-600"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item.label}
+                  {t(`nav.${item.label.toLowerCase()}`)}
                 </a>
               ))}
-              <Button className="w-full mt-2">Get Started</Button>
+              <div className="flex space-x-4 mt-2">
+                <button 
+                  onClick={() => changeLanguage('en')} 
+                  className={`p-1 rounded-full ${i18n.language && (i18n.language === 'en' || i18n.language.startsWith('en-')) ? 'ring-2 ring-blue-500' : ''}`}
+                  title="English"
+                >
+                  <ReactCountryFlag 
+                    countryCode="US" 
+                    svg 
+                    className="w-6 h-6 rounded-full"
+                  />
+                </button>
+                <button 
+                  onClick={() => changeLanguage('fr')} 
+                  className={`p-1 rounded-full ${i18n.language && (i18n.language === 'fr' || i18n.language.startsWith('fr-')) ? 'ring-2 ring-blue-500' : ''}`}
+                  title="Français"
+                >
+                  <ReactCountryFlag 
+                    countryCode="FR" 
+                    svg 
+                    className="w-6 h-6 rounded-full"
+                  />
+                </button>
+              </div>
+              <Button className="w-full mt-2">{t('getStarted')}</Button>
             </nav>
           </Container>
         </div>
