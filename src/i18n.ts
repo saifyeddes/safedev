@@ -137,7 +137,11 @@ const resources = {
         note: {
           title: 'Flexible Duration',
           description: 'Choose the internship duration that fits your schedule and learning goals.'
-        }
+        },
+        applyTitle: 'Application Information',
+        applyMessage1: 'The internship application form will be available soon.',
+        applyMessage2: 'In the meantime, you can send us an email with your application to:',
+        mentionDuration: 'Please mention the internship duration:'
       },
       
       // Testimonials Section
@@ -344,7 +348,11 @@ const resources = {
         note: {
           title: 'Durée Flexible',
           description: 'Choisissez la durée de stage qui correspond à votre emploi du temps et à vos objectifs d\'apprentissage.'
-        }
+        },
+        applyTitle: 'Information de Candidature',
+        applyMessage1: 'Le formulaire de demande de stage sera bientôt disponible.',
+        applyMessage2: 'En attendant, vous pouvez nous envoyer un email avec votre candidature à :',
+        mentionDuration: 'Veuillez mentionner la durée du stage :'
       },
       
       // Testimonials Section

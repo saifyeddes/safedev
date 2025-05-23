@@ -1,8 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Section } from '../ui/Section';
-import { Badge } from '../ui/Badge';
-import { Briefcase, Award, FileText, Clock } from 'lucide-react';
+import { Section, Badge, Dialog } from '../ui';
+import { Briefcase, Award, FileText, Clock, Mail } from 'lucide-react';
 
 interface InternshipOfferProps {
   duration: string;
@@ -12,46 +11,80 @@ interface InternshipOfferProps {
 
 const InternshipOfferCard: React.FC<InternshipOfferProps> = ({ duration, price, popular = false }) => {
   const { t } = useTranslation();
+  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
+  
+  const handleApplyClick = () => {
+    setIsDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+  };
   
   return (
-    <div className={`relative bg-white p-6 rounded-xl border-2 ${popular ? 'border-blue-500' : 'border-slate-100'} shadow-sm hover:shadow-md transition-all duration-300`}>
-      <div className="flex flex-col items-center">
-        {popular && (
-          <div className="mb-2">
-            <Badge variant="primary" className="px-3 py-1 text-sm font-medium whitespace-nowrap">
-              {t('internship.mostPopular')}
-            </Badge>
+    <>
+      <div className={`relative bg-white p-6 rounded-xl border-2 ${popular ? 'border-blue-500' : 'border-slate-100'} shadow-sm hover:shadow-md transition-all duration-300`}>
+        <div className="flex flex-col items-center">
+          {popular && (
+            <div className="mb-2">
+              <Badge variant="primary" className="px-3 py-1 text-sm font-medium whitespace-nowrap">
+                {t('internship.mostPopular')}
+              </Badge>
+            </div>
+          )}
+          <h3 className="text-2xl font-bold text-slate-800">{duration} {t('internship.months')}</h3>
+        
+          <p className="text-slate-500 text-sm mt-1">{t('internship.duration')}</p>
+        </div>
+        
+        <div className="text-center mb-6">
+          <span className="text-4xl font-bold text-blue-600">{price} DT</span>
+          <span className="text-slate-500"> / {t('internship.perMonth')}</span>
+        </div>
+        
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-center text-slate-700">
+            <Briefcase className="h-5 w-5 text-blue-500 mr-2" />
+            {t('internship.features.internship')}
+          </li>
+          <li className="flex items-center text-slate-700">
+            <Award className="h-5 w-5 text-blue-500 mr-2" />
+            {t('internship.features.certification')}
+          </li>
+          <li className="flex items-center text-slate-700">
+            <FileText className="h-5 w-5 text-blue-500 mr-2" />
+            {t('internship.features.attestation')}
+          </li>
+        </ul>
+        
+        <button 
+          onClick={handleApplyClick}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+        >
+          {t('internship.applyNow')}
+        </button>
+      </div>
+
+      <Dialog
+        isOpen={isDialogOpen}
+        onClose={handleCloseDialog}
+        title={t('internship.applyTitle')}
+      >
+        <div className="space-y-4">
+          <p>{t('internship.applyMessage1')}</p>
+          <p className="font-medium">{t('internship.applyMessage2')}</p>
+          <div className="mt-4 p-3 bg-blue-50 rounded-lg flex items-start">
+            <Mail className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="font-medium">safe-dev-contact@proton.me</p>
+              <p className="text-sm text-slate-600">
+                {t('internship.mentionDuration')} {duration} {t('internship.months')}
+              </p>
+            </div>
           </div>
-        )}
-        <h3 className="text-2xl font-bold text-slate-800">{duration} {t('internship.months')}</h3>
-      
-        <p className="text-slate-500 text-sm mt-1">{t('internship.duration')}</p>
-      </div>
-      
-      <div className="text-center mb-6">
-        <span className="text-4xl font-bold text-blue-600">{price} DT</span>
-        <span className="text-slate-500"> / {t('internship.perMonth')}</span>
-      </div>
-      
-      <ul className="space-y-3 mb-6">
-        <li className="flex items-center text-slate-700">
-          <Briefcase className="h-5 w-5 text-blue-500 mr-2" />
-          {t('internship.features.internship')}
-        </li>
-        <li className="flex items-center text-slate-700">
-          <Award className="h-5 w-5 text-blue-500 mr-2" />
-          {t('internship.features.certification')}
-        </li>
-        <li className="flex items-center text-slate-700">
-          <FileText className="h-5 w-5 text-blue-500 mr-2" />
-          {t('internship.features.attestation')}
-        </li>
-      </ul>
-      
-      <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
-        {t('internship.applyNow')}
-      </button>
-    </div>
+        </div>
+      </Dialog>
+    </>
   );
 };
 
