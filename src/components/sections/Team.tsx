@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Section } from '../ui/Section';
 import { siteConfig } from '../../data/site-data';
+import { AlertCircle } from 'lucide-react';
 
 export const Team: React.FC = () => {
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleViewPositions = () => {
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 5000); // Hide after 5 seconds
+  };
+
   return (
     <Section
       id="team"
@@ -45,9 +53,20 @@ export const Team: React.FC = () => {
         <p className="text-slate-600 max-w-2xl mx-auto mb-6">
           Are you passionate about cybersecurity and development? Join our team of experts and help build secure solutions for our clients.
         </p>
-        <button className="bg-slate-800 hover:bg-slate-900 text-white font-medium py-3 px-6 rounded-md transition-colors">
-          View Open Positions
-        </button>
+        <div className="flex flex-col items-center">
+          <button 
+            onClick={handleViewPositions}
+            className="bg-slate-800 hover:bg-slate-900 text-white font-medium py-3 px-6 rounded-md transition-colors"
+          >
+            View Open Positions
+          </button>
+          {showAlert && (
+            <div className="mt-4 flex items-center text-red-500 bg-red-50 px-4 py-2 rounded-md">
+              <AlertCircle className="h-5 w-5 mr-2" />
+              <span>No open positions at the moment. Please check back soon!</span>
+            </div>
+          )}
+        </div>
       </div>
     </Section>
   );
