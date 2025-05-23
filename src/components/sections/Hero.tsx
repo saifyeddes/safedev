@@ -24,8 +24,8 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight max-w-4xl mx-auto">
-            <span className="block slide-up">Secure Your Digital Future</span>
-            <span className="block gradient-text slide-up animate-delay-200">With SAFEDEV</span>
+            <span className="block slide-up mb-4">Secure Your Digital Future</span>
+            <span className="block gradient-text slide-up animate-delay-200 mt-2">With SAFEDEV</span>
           </h1>
           
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mb-8 slide-up animate-delay-300">
