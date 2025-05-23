@@ -81,9 +81,9 @@ export const siteConfig = {
     },
   ] as Testimonial[],
   contact: {
-    email: 'info@safedev.com',
-    phone: '+1 (555) 123-4567',
-    address: '123 Security Ave, Cybertown, CT 10101',
+    email: 'safe-dev-contact@proton.me',
+    phone: '+34646112488',
+    address: 'Ghent, Belgium',
   },
   social: {
     twitter: 'https://twitter.com/safedev',

@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
           
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '10+', label: 'Years Experience' },
+              { value: '5+', label: 'Years Experience' },
               { value: '250+', label: 'Projects Secured' },
               { value: '99.9%', label: 'Client Satisfaction' },
               { value: '24/7', label: 'Support Available' }

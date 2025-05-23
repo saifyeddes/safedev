@@ -40,8 +40,8 @@ export const Contact: React.FC = () => {
                   <Phone className="h-6 w-6 text-blue-600" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold mb-1">Call Us</h4>
-                  <a href={`tel:${siteConfig.contact.phone}`} className="text-slate-600 hover:text-blue-600 transition-colors">
+                  <h4 className="font-semibold mb-1">Contact us via WhatsApp</h4>
+                  <a href={`https://wa.me/${siteConfig.contact.phone.replace(/[^0-9]/g, '')}`} className="text-slate-600 hover:text-green-600 transition-colors" target="_blank" rel="noopener noreferrer">
                     {siteConfig.contact.phone}
                   </a>
                 </div>

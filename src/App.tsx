@@ -6,6 +6,7 @@ import { Team } from './components/sections/Team';
 import { Testimonials } from './components/sections/Testimonials';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/layout/Footer';
+import { Chatbot } from './components/Chatbot';
 
 function App() {
   useEffect(() => {
@@ -58,6 +59,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
+      <Chatbot />
     </div>
   );
 }
