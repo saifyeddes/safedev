@@ -16,11 +16,16 @@ export const Team: React.FC = () => {
             key={index}
             className="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md group"
           >
-            <div className="aspect-[4/3] overflow-hidden">
+            <div className="aspect-square overflow-hidden">
               <img 
                 src={member.image} 
                 alt={member.name} 
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  objectPosition: 'center 20%',
+                  width: '100%',
+                  height: '100%'
+                }}
               />
             </div>
             <div className="p-6">
