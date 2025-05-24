@@ -100,7 +100,7 @@ export const InternshipOffers: React.FC = () => {
 
   return (
     <Section
-      id="internship"
+      id="offers"
       className="bg-gradient-to-b from-slate-50 to-white"
       title={t('internship.title')}
       subtitle={t('internship.subtitle')}

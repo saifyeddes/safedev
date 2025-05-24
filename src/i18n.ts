@@ -10,9 +10,13 @@ const resources = {
       nav: {
         home: 'Home',
         services: 'Services',
+        offers: 'Offers',
+        specialties: 'Specialties',
         team: 'Team',
         testimonials: 'Testimonials',
-        contact: 'Contact'
+        contact: 'Contact',
+        quickLinks: 'Quick Links',
+        contactUs: 'Contact Us'
       },
       
       // Common
@@ -25,6 +29,7 @@ const resources = {
         viewAll: 'View All',
         readMore: 'Read More',
         getInTouch: 'Get in Touch',
+        siteDescription: 'Securing your digital future with advanced development solutions',
         sendMessage: 'Send Message',
         name: 'Name',
         email: 'Email',
@@ -57,7 +62,11 @@ const resources = {
       // Services Section
       services: {
         title: 'Our Services',
-        subtitle: 'We provide comprehensive security and development solutions to protect your digital assets and accelerate your business growth.',
+        siteDescription: {
+          en: 'Securing your digital future with advanced development solutions',
+          fr: 'Sécuriser votre avenir numérique avec des solutions de développement avancées'
+        },
+        subtitle: 'Securing your digital future with advanced development solutions to protect your digital assets and accelerate your business growth.',
         customSolution: {
           title: 'Need a custom security solution?',
           description: 'Our team of experts can design a tailored security strategy that addresses your specific challenges and requirements.',
@@ -121,6 +130,21 @@ const resources = {
       },
       
       // Internship Offers Section
+      specialties: {
+        title: 'Our Specialties',
+        subtitle: 'Expertise Areas',
+        description: 'Discover our comprehensive range of IT specialties designed to meet your business needs and drive innovation.',
+        footer: 'Our team of experts is ready to help you with any of these specialties. Contact us to learn more about how we can assist with your specific requirements.',
+        items: {
+          softwareDev: 'Software Development',
+          ai: 'Artificial Intelligence',
+          cybersecurity: 'Cybersecurity',
+          design: 'Design',
+          itManagement: 'IT Management',
+          database: 'Database'
+        }
+      },
+      
       internship: {
         title: 'Internship Programs',
         subtitle: 'Join our internship programs and kickstart your career in technology with hands-on experience and professional growth opportunities.',
@@ -189,9 +213,13 @@ const resources = {
       nav: {
         home: 'Accueil',
         services: 'Services',
+        offers: 'Offres',
+        specialties: 'Spécialités',
         team: 'Équipe',
         testimonials: 'Témoignages',
-        contact: 'Contact'
+        contact: 'Contact',
+        quickLinks: 'Liens rapides',
+        contactUs: 'Contactez-nous'
       },
       
       // Common
@@ -204,6 +232,7 @@ const resources = {
         viewAll: 'Voir tout',
         readMore: 'Lire la suite',
         getInTouch: 'Contactez-nous',
+        siteDescription: 'Sécuriser votre avenir numérique avec des solutions de développement avancées',
         sendMessage: 'Envoyer un message',
         name: 'Nom',
         email: 'Email',
@@ -332,9 +361,24 @@ const resources = {
       },
       
       // Internship Offers Section
+      specialties: {
+        title: 'Nos Spécialités',
+        subtitle: 'Domaines d\'Expertise',
+        description: 'Découvrez notre gamme complète de spécialités informatiques conçues pour répondre à vos besoins métiers et stimuler l\'innovation.',
+        footer: 'Notre équipe d\'experts est prête à vous aider dans ces différents domaines. Contactez-nous pour en savoir plus sur la manière dont nous pouvons vous accompagner.',
+        items: {
+          softwareDev: 'Développement Logiciel',
+          ai: 'Intelligence Artificielle',
+          cybersecurity: 'Cybersécurité',
+          design: 'Conception',
+          itManagement: 'Gestion IT',
+          database: 'Bases de Données'
+        }
+      },
+      
       internship: {
-        title: 'Offres de Stage',
-        subtitle: 'Rejoignez nos programmes de stage et lancez votre carrière dans la technologie avec une expérience pratique et des opportunités de développement professionnel.',
+        title: 'Programmes de Stage',
+        subtitle: 'Rejoignez nos programmes de stage et lancez votre carrière dans la technologie avec une expérience pratique et des opportunités de croissance professionnelle.',
         months: 'mois',
         duration: 'Durée',
         perMonth: 'total',

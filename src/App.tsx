@@ -5,6 +5,7 @@ import {
   Services, 
   Team, 
   InternshipOffers, 
+  Specialties,
   Testimonials, 
   Contact 
 } from './components/sections';
@@ -65,6 +66,7 @@ function App() {
       <Hero />
       <Services />
       <InternshipOffers />
+      <Specialties />
       <Team />
       <Testimonials />
       <Contact />

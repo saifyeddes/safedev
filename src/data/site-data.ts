@@ -7,6 +7,8 @@ export const siteConfig = {
     items: [
       { label: 'Home', href: '#home' },
       { label: 'Services', href: '#services' },
+      { label: 'Offers', href: '#offers' },
+      { label: 'Specialties', href: '#specialties' },
       { label: 'Team', href: '#team' },
       { label: 'Testimonials', href: '#testimonials' },
       { label: 'Contact', href: '#contact' },
@@ -79,7 +81,7 @@ export const siteConfig = {
   contact: {
     email: 'safe-dev-contact@proton.me',
     phone: '+34646112488',
-    address: 'Ghent, Belgium',
+    address: 'Barcelona, Spain',
   },
   social: {
     twitter: 'https://twitter.com/safedev',
