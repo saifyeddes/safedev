@@ -93,16 +93,110 @@ const messages = {
   }
 };
 
-// Function to get the right message set based on keyword
-const getMessageSet = (input: string) => {
-  const frenchKeywords = ['équipe', 'offre', 'spécialité', 'service', 'contact', 'bonjour', 'salut'];
+// Fonction pour calculer la distance de Levenshtein entre deux chaînes
+const levenshteinDistance = (a: string, b: string): number => {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      const cost = a[j - 1] === b[i - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,     // Suppression
+        matrix[i][j - 1] + 1,     // Insertion
+        matrix[i - 1][j - 1] + cost // Substitution
+      );
+    }
+  }
+  return matrix[b.length][a.length];
+};
+
+// Fonction pour trouver le meilleur match avec tolérance aux fautes
+export const findBestMatch = (input: string, options: string[], maxDistance: number = 2): string | null => {
+  const inputLower = input.toLowerCase();
   
-  // Check for French keywords first
-  if (frenchKeywords.some(keyword => input.includes(keyword))) {
-    return messages.fr;
+  // D'abord vérifier les correspondances exactes
+  const exactMatch = options.find(option => 
+    inputLower === option || inputLower.includes(option)
+  );
+  if (exactMatch) return exactMatch;
+  
+  // Ensuite, vérifier les correspondances partielles
+  const partialMatch = options.find(option => 
+    option.includes(inputLower) || inputLower.includes(option)
+  );
+  if (partialMatch) return partialMatch;
+  
+  // Enfin, utiliser la distance de Levenshtein pour les fautes de frappe
+  let bestMatch: { word: string; distance: number } | null = null;
+  
+  for (const option of options) {
+    const distance = levenshteinDistance(inputLower, option);
+    if (distance <= maxDistance && (!bestMatch || distance < bestMatch.distance)) {
+      bestMatch = { word: option, distance };
+    }
   }
   
-  // Default to English
+  return bestMatch ? bestMatch.word : null;
+};
+
+// Dictionnaire de mots-clés avec leurs variantes
+const keywordVariants: Record<string, string[]> = {
+  // Français
+  'equipe': ['ekip', 'ekipe', 'lequipe', 'lequipe'],
+  'offre': ['ofre', 'offr', 'ofr', 'offres'],
+  'specialite': ['specialité', 'specialit', 'specialty', 'specialt'],
+  'service': ['servis', 'services', 'servise', 'serv'],
+  'contact': ['contat', 'contackt', 'kontakt', 'contacte', 'contacts'],
+  'bonjour': ['bonjur', 'bonsoir', 'salut', 'slt', 'bjr', 'hello', 'hi', 'hey'],
+  'salut': ['slt', 'hello', 'hi', 'hey'],
+  
+  // Anglais
+  'team': ['tem', 'teem', 'teams', 'teammate'],
+  'offer': ['ofer', 'offers', 'offre', 'offr'],
+  'specialty': ['specialt', 'specialite', 'specialité', 'specialit'],
+  'hello': ['hallo', 'hi', 'hey', 'bonjour', 'salut']
+};
+
+// Mots-clés français
+const frenchKeywords = ['equipe', 'offre', 'specialite', 'service', 'contact', 'bonjour', 'salut'];
+
+// Function to get the right message set based on keyword
+const getMessageSet = (input: string) => {
+  // Convertir l'input en minuscules et supprimer les espaces
+  const cleanInput = input.toLowerCase().trim();
+  
+  // Vérifier d'abord les mots-clés français
+  for (const keyword of frenchKeywords) {
+    // Vérifier le mot-clé exact
+    if (cleanInput === keyword) return messages.fr;
+    
+    // Vérifier si le mot-clé est contenu dans l'input
+    if (cleanInput.includes(keyword)) return messages.fr;
+    
+    // Vérifier les variantes du mot-clé
+    const variants = keywordVariants[keyword] || [];
+    if (variants.some(variant => cleanInput.includes(variant))) {
+      return messages.fr;
+    }
+  }
+  
+  // Ensuite vérifier les mots-clés anglais
+  const englishKeywords = ['team', 'offer', 'specialty', 'service', 'contact', 'hello', 'hi'];
+  for (const keyword of englishKeywords) {
+    if (cleanInput === keyword || cleanInput.includes(keyword)) {
+      return messages.en;
+    }
+  }
+  
+  // Par défaut en anglais
   return messages.en;
 };
 
