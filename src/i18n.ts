@@ -6,6 +6,27 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   en: {
     translation: {
+      // Chatbot
+      chatbot: {
+        welcome: 'Hello! I\'m the SAFEDEV assistant. How can I help you today? For more information, you can contact us at {{email}}',
+        defaultResponse: 'How can I help you today? Here are some suggestions:',
+        contactInfo: '📧 Email: {{email}}\n📞 Phone: {{phone}}',
+        suggestions: {
+          offers: 'View our internship offers',
+          services: 'Discover our services',
+          specialties: 'Explore our specialties',
+          team: 'Learn about our team',
+          contact: 'Contact us'
+        },
+        offers: {
+          title: '📋 Our Internship Offers',
+          note: '🔥 Most popular options marked\n💡 All offers include internship certificate and practical experience'
+        },
+        team: {
+          contact: '\n📧 Contact us for more information: {{email}}'
+        }
+      },
+      
       // Navigation
       nav: {
         home: 'Home',
@@ -66,7 +87,7 @@ const resources = {
           en: 'Securing your digital future with advanced development solutions',
           fr: 'Sécuriser votre avenir numérique avec des solutions de développement avancées'
         },
-        subtitle: 'Securing your digital future with advanced development solutions to protect your digital assets and accelerate your business growth.',
+        subtitle: 'We offer professional paid and international training programs, in partnership with internationally accredited training centers. Our programs include practical internships and provide recognized internship certificates.',
         customSolution: {
           title: 'Need a custom security solution?',
           description: 'Our team of experts can design a tailored security strategy that addresses your specific challenges and requirements.',
@@ -209,6 +230,27 @@ const resources = {
   },
   fr: {
     translation: {
+      // Chatbot
+      chatbot: {
+        welcome: 'Bonjour ! Je suis l\'assistant SAFEDEV. Comment puis-je vous aider aujourd\'hui ? Pour plus d\'informations, vous pouvez nous contacter à {{email}}',
+        defaultResponse: 'Comment puis-je vous aider ? Voici quelques suggestions :',
+        contactInfo: '📧 Email : {{email}}\n📞 Téléphone : {{phone}}',
+        suggestions: {
+          offers: 'Voir nos offres de stage',
+          services: 'Découvrir nos services',
+          specialties: 'Explorer nos spécialités',
+          team: 'Découvrir notre équipe',
+          contact: 'Nous contacter'
+        },
+        offers: {
+          title: '📋 Nos Offres de Stage',
+          note: '🔥 Options les plus populaires marquées\n💡 Toutes les offres incluent une attestation de stage et une expérience pratique'
+        },
+        team: {
+          contact: '\n📧 Contactez-nous pour plus d\'informations : {{email}}'
+        }
+      },
+      
       // Navigation
       nav: {
         home: 'Accueil',
@@ -265,7 +307,7 @@ const resources = {
       // Services Section
       services: {
         title: 'Nos Services',
-        subtitle: 'Nous fournissons des solutions complètes de sécurité et de développement pour protéger vos actifs numériques et accélérer la croissance de votre entreprise.',
+        subtitle: 'Nous proposons des formations professionnelles payantes et internationales, en partenariat avec des centres de formation agréés à l\'échelle internationale. Nos programmes comprennent des stages pratiques et délivrent des attestations de stage reconnues.',
         customSolution: {
           title: 'Besoin d\'une solution de sécurité personnalisée ?',
           description: 'Notre équipe d\'experts peut concevoir une stratégie de sécurité sur mesure qui répond à vos défis et exigences spécifiques.',
