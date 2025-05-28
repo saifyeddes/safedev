@@ -13,8 +13,18 @@ interface TeamMember {
 }
 
 export const Team: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showAlert, setShowAlert] = React.useState(false);
+  
+  // Fonction pour obtenir la traduction du membre
+  const getTranslatedMember = (member: TeamMember) => {
+    const memberKey = member.name.toLowerCase().split(' ')[0];
+    return {
+      ...member,
+      role: t(`team.members.${memberKey}.role`, { defaultValue: member.role }),
+      bio: t(`team.members.${memberKey}.bio`, { defaultValue: member.bio })
+    };
+  };
 
   const handleViewPositions = () => {
     setShowAlert(true);
@@ -29,7 +39,9 @@ export const Team: React.FC = () => {
       subtitle={t('team.subtitle')}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {(siteConfig.team as TeamMember[]).map((member: TeamMember, index: number) => (
+        {(siteConfig.team as TeamMember[]).map((member: TeamMember, index: number) => {
+          const translatedMember = getTranslatedMember(member);
+          return (
           <div 
             key={index}
             className="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md group"
@@ -47,16 +59,17 @@ export const Team: React.FC = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+              <h3 className="text-xl font-semibold mb-1">{translatedMember.name}</h3>
               <p className="text-blue-600 font-medium text-sm mb-3">
-                {t(`team.members.${member.name.toLowerCase().split(' ')[0]}.role`)}
+                {translatedMember.role}
               </p>
               <p className="text-slate-600 text-sm">
-                {t(`team.members.${member.name.toLowerCase().split(' ')[0]}.bio`)}
+                {translatedMember.bio}
               </p>
             </div>
-          </div>
-        ))}
+            </div>
+          );
+        })}
       </div>
 
       <div className="mt-16 text-center">

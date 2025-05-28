@@ -40,22 +40,22 @@ export const siteConfig = {
       image: 'https://media.licdn.com/dms/image/v2/D4E03AQGFpXUPMsNR6w/profile-displayphoto-shrink_800_800/B4EZY_MKwOHgAg-/0/1744816882543?e=1753315200&v=beta&t=EpgMo55UQkvGiYeNp7Cct9AGJ4DyJlBClZxUeBpQDnQ',
     },
     {
+      name: 'Clara Martínez',
+      role: 'UX/UI Designer',
+      bio: 'Creative designer with a passion for creating intuitive and beautiful user experiences. Clara brings our projects to life with her design expertise, ensuring both functionality and aesthetics are perfectly balanced.',
+      image: 'https://images.pexels.com/photos/1853101/pexels-photo-1853101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
+      name: 'Daniel Bukin',
+      role: 'Operations Manager',
+      bio: 'Operations specialist with extensive experience in process optimization and security. Daniel ensures our projects run smoothly and efficiently, maintaining the highest standards of quality and security throughout the development lifecycle.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRijOjK4jabVwbGHoTtpN8GtZ6juttlIvie5Q&s',
+    },
+    {
       name: 'Chedy Soltani',
       role: 'IT Leader Developer',
-      bio: 'Development expert with deep expertise in complex software architectures. Chedy guides our technical team towards technical excellence and innovation.',
+      bio: 'Development expert with deep expertise in complex software architectures. Chedy guides our technical team towards technical excellence and innovation, ensuring our solutions are both robust and cutting-edge.',
       image: 'https://media.licdn.com/dms/image/v2/D4D03AQGGETyOkdmFxQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688556104812?e=1753315200&v=beta&t=ynt-aIIiUjFVbu71kzFGiI0QZg6l4IX2lF88B_Zq59s',
-    },
-    {
-      name: 'Nawres Yeddes',
-      role: 'Scrum Master',
-      bio: 'Agile methodologies specialist, Nawres ensures smooth and efficient project management. He facilitates collaboration and maximizes team productivity.',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQFoNOCWO1vAoQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716248806555?e=1753315200&v=beta&t=n7nkeXN9BCQu4vY0WMVNn4k3koENM86KBJ0EPI7vh-I',
-    },
-    {
-      name: 'Eric Wetu',
-      role: 'Operations Manager',
-      bio: 'Operations specialist with a keen eye for efficiency and security. Eric ensures our projects run smoothly and securely from start to finish.',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQFCHrNttmo6kw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1661986654650?e=1753315200&v=beta&t=DBO98HeWeCvwza7sZySGWp9O8jV1TMmIt5k34cRMvus',
     },
   ] as TeamMember[],
   testimonials: [
@@ -82,6 +82,12 @@ export const siteConfig = {
     email: 'safe-dev-contact@proton.me',
     phone: '+34646112488',
     address: 'Barcelona, Spain',
+    prices: {
+      twoMonths: '200 TND / mois',
+      threeMonths: '250 TND / mois',
+      fourMonths: '400 TND / mois',
+      sixMonths: '500 TND / mois'
+    }
   },
   social: {
     twitter: 'https://twitter.com/safedev',

@@ -15,10 +15,10 @@ const messages = {
     welcome: () => `Bonjour ! Je suis l'assistant SAFEDEV. Comment puis-je vous aider ?`,
     offers: {
       title: '📋 Nos Offres de Stage',
-      list: '💰 2 mois - 200 DT / mois\n' +
-            '🔥 3 mois - 250 DT / mois (Le plus populaire)\n' +
-            '🔥 4 mois - 350 DT / mois (Le plus populaire)\n' +
-            '💰 6 mois - 500 DT / mois',
+      list: '💰 2 mois - 200 TND / mois\n' +
+            '🔥 3 mois - 250 TND / mois (Le plus populaire)\n' +
+            '🔥 4 mois - 400 TND / mois (Le plus populaire)\n' +
+            '💰 6 mois - 500 TND / mois',
       note: '💡 Toutes les offres incluent une attestation de stage et une expérience pratique'
     },
     team: {
@@ -48,6 +48,47 @@ const messages = {
       email: 'Email',
       phone: 'Téléphone',
       address: 'Adresse'
+    }
+  },
+  
+  // Spanish messages
+  es: {
+    welcome: () => `¡Hola! Soy el asistente de SAFEDEV. ¿En qué puedo ayudarte?`,
+    offers: {
+      title: '📋 Nuestras Ofertas de Prácticas',
+      list: '💰 2 meses - 200 DT / mes\n' +
+            '🔥 3 meses - 250 DT / mes (Más popular)\n' +
+            '🔥 4 meses - 350 DT / mes (Más popular)\n' +
+            '💰 6 meses - 500 DT / mes',
+      note: '💡 Todas las ofertas incluyen certificado de prácticas y experiencia práctica.'
+    },
+    team: {
+      title: '👥 Nuestro Equipo',
+      contact: (email: string) => `\n📧 Contacto: ${email}`
+    },
+    specialties: {
+      title: '🌟 Nuestras Especialidades',
+      list: '🔹 Desarrollo de Software\n' +
+            '🔹 Inteligencia Artificial\n' +
+            '🔹 Ciberseguridad\n' +
+            '🔹 Diseño\n' + 
+            '🔹 Gestión de TI\n' +
+            '🔹 Bases de Datos'
+    },
+    services: {
+      title: '🛠️ Nuestros Servicios',
+      list: '🛡️ Desarrollo Seguro\n' +
+            '🔍 Auditorías de Seguridad\n' +
+            '🔄 DevSecOps\n' +
+            '🚨 Respuesta a Incidentes',
+      description: 'Ofrecemos soluciones integrales para asegurar tus proyectos digitales.'
+    },
+    contact: {
+      title: '📞 Contacto',
+      workingHours: '🕒 Lunes a Viernes 9h-18h',
+      email: 'Correo electrónico',
+      phone: 'Teléfono',
+      address: 'Dirección'
     }
   },
   
@@ -185,6 +226,14 @@ const getMessageSet = (input: string) => {
     const variants = keywordVariants[keyword] || [];
     if (variants.some(variant => cleanInput.includes(variant))) {
       return messages.fr;
+    }
+  }
+  
+  // Vérifier les mots-clés espagnols
+  const spanishKeywords = ['equipo', 'oferta', 'especialidad', 'servicio', 'contacto', 'hola'];
+  for (const keyword of spanishKeywords) {
+    if (cleanInput === keyword || cleanInput.includes(keyword)) {
+      return messages.es;
     }
   }
   

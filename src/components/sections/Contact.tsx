@@ -71,11 +71,11 @@ export const Contact: React.FC = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex justify-between items-center py-2 border-b border-slate-100">
                 <span className="text-slate-600">{t('contact.contactMethods.hours.weekdays')}</span>
-                <span className="font-medium text-slate-800">9:00 - 18:00</span>
+                <span className="font-medium text-slate-800">{t('contact.contactMethods.hours.weekdaysHours')}</span>
               </li>
               <li className="flex justify-between items-center py-2 border-b border-slate-100">
                 <span className="text-slate-600">{t('contact.contactMethods.hours.saturday')}</span>
-                <span className="font-medium text-slate-800">10:00 - 16:00</span>
+                <span className="font-medium text-slate-800">{t('contact.contactMethods.hours.saturdayHours')}</span>
               </li>
               <li className="flex justify-between items-center py-2">
                 <span className="text-slate-600">{t('contact.contactMethods.hours.sunday')}</span>
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
             </div>
             
             <Button type="submit" className="w-full flex items-center justify-center group text-lg">
-              Send Message
+              {t('contact.form.submit')}
               <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 

@@ -38,7 +38,7 @@ const InternshipOfferCard: React.FC<InternshipOfferProps> = ({ duration, price, 
         </div>
         
         <div className="text-center mb-6">
-          <span className="text-4xl font-bold text-blue-600">{price} DT</span>
+          <span className="text-4xl font-bold text-blue-600">{price} TND</span>
           <span className="text-slate-500"> / {t('internship.perMonth')}</span>
         </div>
         
@@ -94,7 +94,7 @@ export const InternshipOffers: React.FC = () => {
   const offers = [
     { duration: '2', price: 200 },
     { duration: '3', price: 250, popular: true },
-    { duration: '4', price: 350, popular: true },
+    { duration: '4', price: 400, popular: true },
     { duration: '6', price: 500 },
   ];
 

@@ -72,6 +72,17 @@ export const Navbar: React.FC = () => {
                 className="w-6 h-6 rounded-full"
               />
             </button>
+            <button 
+              onClick={() => changeLanguage('es')} 
+              className={`p-1 rounded-full ${i18n.language && (i18n.language === 'es' || i18n.language.startsWith('es-')) ? 'ring-2 ring-blue-500' : ''}`}
+              title="Español"
+            >
+              <ReactCountryFlag 
+                countryCode="ES" 
+                svg 
+                className="w-6 h-6 rounded-full"
+              />
+            </button>
           </div>
           <a href="#services">
             <Button>{t('common.getStarted')}</Button>
@@ -125,6 +136,17 @@ export const Navbar: React.FC = () => {
                 >
                   <ReactCountryFlag 
                     countryCode="FR" 
+                    svg 
+                    className="w-6 h-6 rounded-full"
+                  />
+                </button>
+                <button 
+                  onClick={() => changeLanguage('es')} 
+                  className={`p-1 rounded-full ${i18n.language && (i18n.language === 'es' || i18n.language.startsWith('es-')) ? 'ring-2 ring-blue-500' : ''}`}
+                  title="Español"
+                >
+                  <ReactCountryFlag 
+                    countryCode="ES" 
                     svg 
                     className="w-6 h-6 rounded-full"
                   />

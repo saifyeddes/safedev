@@ -447,6 +447,258 @@ const resources = {
         subtitle: 'Découvrez ce que nos clients disent de nos solutions de sécurité et de développement.'
       }
     }
+  },
+  es: {
+    translation: {
+      // Chatbot
+      chatbot: {
+        welcome: '¡Hola! Soy el asistente de SAFEDEV. ¿En qué puedo ayudarte hoy? Para más información, puedes contactarnos en {{email}}',
+        defaultResponse: '¿Cómo puedo ayudarte? Aquí tienes algunas sugerencias:',
+        contactInfo: '📧 Correo electrónico: {{email}}\n📞 Teléfono: {{phone}}',
+        suggestions: {
+          offers: 'Ver ofertas de prácticas',
+          services: 'Nuestros servicios',
+          specialties: 'Nuestras especialidades',
+          team: 'Nuestro equipo',
+          contact: 'Contáctanos'
+        },
+        offers: {
+          title: '📋 Nuestras Ofertas de Prácticas',
+          note: '💡 Todas las ofertas incluyen certificado de prácticas y experiencia práctica.'
+        },
+        team: {
+          contact: '\n📧 Contáctanos: {{email}}'
+        }
+      },
+      
+      // Navegación
+      nav: {
+        home: 'Inicio',
+        services: 'Servicios',
+        offers: 'Ofertas',
+        specialties: 'Especialidades',
+        team: 'Equipo',
+        testimonials: 'Testimonios',
+        contact: 'Contacto',
+        quickLinks: 'Enlaces rápidos',
+        contactUs: 'Contáctanos'
+      },
+      
+      // Común
+      common: {
+        years: 'Años',
+        projects: 'Proyectos',
+        clients: 'Clientes',
+        support: 'Soporte',
+        learnMore: 'Saber más',
+        viewAll: 'Ver todo',
+        readMore: 'Leer más',
+        getInTouch: 'Contáctanos',
+        siteDescription: 'Aseguramos tu futuro digital con soluciones de desarrollo avanzadas',
+        sendMessage: 'Enviar mensaje',
+        name: 'Nombre',
+        email: 'Correo electrónico',
+        phone: 'Teléfono',
+        message: 'Mensaje',
+        submit: 'Enviar',
+        loading: 'Cargando...',
+        success: '¡Éxito!',
+        error: '¡Error!',
+        close: 'Cerrar',
+        getStarted: 'Comenzar'
+      },
+      
+      // Sección Hero
+      hero: {
+        tagline: 'Seguridad a la velocidad del desarrollo',
+        title1: 'Asegura tu Futuro Digital',
+        title2: 'con SAFEDEV',
+        description: 'Combinamos prácticas de seguridad de vanguardia con metodologías de desarrollo modernas para ofrecer soluciones digitales robustas y resilientes para organizaciones visionarias.',
+        ctaPrimary: 'Comenzar',
+        ctaSecondary: 'Saber más',
+        stats: {
+          experience: 'Años de experiencia',
+          projects: 'Proyectos asegurados',
+          satisfaction: 'Satisfacción del cliente',
+          support: 'Soporte disponible'
+        }
+      },
+      
+      // Sección de Servicios
+      services: {
+        title: 'Nuestros Servicios',
+        siteDescription: 'Aseguramos tu futuro digital con soluciones de desarrollo avanzadas',
+        subtitle: 'Ofrecemos programas profesionales de formación remunerada e internacional, en asociación con centros de formación acreditados internacionalmente. Nuestros programas incluyen prácticas profesionales y proporcionan certificados de prácticas reconocidos.',
+        secureDev: {
+          title: 'Desarrollo Seguro',
+          description: 'Integramos seguridad en cada etapa del ciclo de vida del desarrollo para crear aplicaciones robustas y resistentes desde el principio.'
+        },
+        securityAudits: {
+          title: 'Auditorías de Seguridad',
+          description: 'Evaluaciones exhaustivas para identificar y corregir vulnerabilidades en sus aplicaciones e infraestructura.'
+        },
+        devSecOps: {
+          title: 'DevSecOps',
+          description: 'Automatización de la seguridad en las tuberías de CI/CD para una implementación segura y eficiente.'
+        },
+        incidentResponse: {
+          title: 'Respuesta a Incidentes',
+          description: 'Equipo de respuesta rápida para mitigar y recuperarse de incidentes de seguridad.'
+        }
+      },
+      
+      // Sección de Equipo
+      team: {
+        title: 'Nuestro Equipo',
+        subtitle: 'Nuestro equipo de expertos en seguridad y desarrollo se dedica a proteger sus activos digitales y acelerar su crecimiento.',
+        joinTeam: {
+          tagline: 'Únete a Nuestro Equipo',
+          title: 'Siempre Buscamos Talento',
+          description: '¿Te apasiona la ciberseguridad y el desarrollo? Únete a nuestro equipo de expertos y ayuda a construir soluciones seguras para nuestros clientes.',
+          cta: 'Ver Vacantes',
+          noPositions: 'No hay vacantes disponibles en este momento. ¡Vuelve a consultar pronto!'
+        },
+        contact: {
+          title: 'Envíanos un Mensaje',
+          getInTouch: 'Contáctanos',
+          emailUs: 'Escríbenos un correo',
+          whatsapp: 'Contáctanos por WhatsApp',
+          visitUs: 'Visítanos',
+          workingHours: 'Horario de Atención',
+          mondayToFriday: 'Lunes a Viernes',
+          mondayToFridayHours: '9:00 - 18:00',
+          saturday: 'Sábado',
+          saturdayHours: '10:00 - 16:00',
+          sunday: 'Domingo',
+          closed: 'Cerrado',
+          responseTime: 'Normalmente respondemos en 24 horas'
+        },
+        members: {
+          saif: {
+            name: 'Saif Eddine Yedes',
+            role: 'CEO y Cofundador',
+            bio: 'Experto en desarrollo web con un historial probado en la creación de aplicaciones web escalables. Saif dirige nuestras estrategias de seguridad y garantiza que todas las soluciones cumplan con los más altos estándares de la industria mientras impulsa la visión de nuestra empresa.'
+          },
+          clara: {
+            name: 'Clara López',
+            role: 'Diseñadora UX/UI',
+            bio: 'Diseñadora creativa apasionada por crear experiencias de usuario intuitivas y hermosas. Clara da vida a nuestros proyectos con su experiencia en diseño, asegurando un equilibrio perfecto entre funcionalidad y estética.'
+          },
+          daniel: {
+            name: 'Daniel García',
+            role: 'Gerente de Operaciones',
+            bio: 'Especialista en operaciones con amplia experiencia en optimización de procesos y seguridad. Daniel garantiza que nuestros proyectos se ejecuten sin problemas y de manera eficiente, manteniendo los más altos estándares de calidad y seguridad durante todo el ciclo de vida del desarrollo.'
+          },
+          chedy: {
+            name: 'Chedy Soltani',
+            role: 'Desarrollador Líder de TI',
+            bio: 'Experto en desarrollo con amplia experiencia en arquitecturas de software complejas. Chedy guía a nuestro equipo técnico hacia la excelencia técnica y la innovación, asegurando que nuestras soluciones sean tanto robustas como vanguardistas.'
+          }
+        }
+      },
+      
+      // Sección de Especialidades
+      specialties: {
+        title: 'Nuestras Especialidades',
+        subtitle: 'Áreas de Especialización',
+        description: 'Descubre nuestra gama completa de especialidades tecnológicas diseñadas para satisfacer las necesidades de tu negocio e impulsar la innovación.',
+        footer: 'Nuestro equipo de expertos está listo para ayudarte en estas áreas. Contáctanos para obtener más información sobre cómo podemos apoyarte.',
+        items: {
+          softwareDev: 'Desarrollo de Software',
+          ai: 'Inteligencia Artificial',
+          cybersecurity: 'Ciberseguridad',
+          design: 'Diseño',
+          itManagement: 'Gestión de TI',
+          database: 'Bases de Datos'
+        }
+      },
+      
+      // Sección de Prácticas
+      internship: {
+        title: 'Programas de Prácticas',
+        subtitle: 'Únete a nuestros programas de prácticas y lanza tu carrera en tecnología con experiencia práctica y oportunidades de crecimiento profesional.',
+        months: 'meses',
+        duration: 'Duración',
+        perMonth: 'total',
+        mostPopular: 'Más Popular',
+        applyNow: 'Aplicar Ahora',
+        features: {
+          internship: 'Prácticas en tu campo',
+          certification: 'Certificación internacional al finalizar',
+          attestation: 'Certificado de prácticas',
+        },
+        note: {
+          title: 'Duración Flexible',
+          description: 'Elige la duración que mejor se adapte a tu horario y objetivos de aprendizaje.'
+        },
+        applyTitle: 'Información de Solicitud',
+        applyMessage1: 'El formulario de solicitud de prácticas estará disponible pronto.',
+        applyMessage2: 'Mientras tanto, puedes enviarnos un correo electrónico con tu solicitud a:',
+        mentionDuration: 'Por favor, menciona la duración de las prácticas:'
+      },
+      
+      // Sección de Testimonios
+      testimonials: {
+        title: 'Lo que Dicen Nuestros Clientes',
+        subtitle: 'Descubre por qué las empresas confían en nosotros para sus necesidades de desarrollo seguro.'
+      },
+      
+      // Sección de Contacto
+      contact: {
+        title: 'Contáctanos',
+        subtitle: '¿Listo para llevar la seguridad de tu organización al siguiente nivel? Completa el formulario y nos pondremos en contacto contigo lo antes posible.',
+        getInTouch: 'Contáctanos',
+        workingHours: 'Horario de Atención',
+        sendMessage: 'Envíanos un Mensaje',
+        form: {
+          name: 'Nombre',
+          email: 'Correo electrónico',
+          phone: 'Teléfono',
+          subject: 'Asunto',
+          message: 'Mensaje',
+          submit: 'Enviar mensaje',
+          success: '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.',
+          error: 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.',
+          responseTime: 'Normalmente respondemos en 24 horas'
+        },
+        contactMethods: {
+          email: 'Escríbenos un correo',
+          whatsapp: 'Contáctanos por WhatsApp',
+          phone: 'Llámanos',
+          visit: 'Visítanos',
+          hours: {
+            weekdays: 'Lunes a Viernes',
+            saturday: 'Sábado',
+            sunday: 'Domingo',
+            closed: 'Cerrado',
+            weekdaysHours: '9:00 - 18:00',
+            saturdayHours: '10:00 - 16:00'
+          }
+        },
+        info: {
+          title: 'Información de Contacto',
+          email: 'Correo electrónico',
+          phone: 'Teléfono',
+          address: 'Dirección',
+          workingHours: 'Horario de Atención',
+          hours: 'Lunes a Viernes: 9:00 - 18:00',
+          location: 'Barcelona, España'
+        },
+        social: 'Síguenos en Redes Sociales'
+      },
+      
+      // Pie de página
+      footer: {
+        about: 'Sobre Nosotros',
+        aboutText: 'SAFEDEV es una empresa líder en soluciones de desarrollo seguro, comprometida con la protección de su futuro digital.',
+        quickLinks: 'Enlaces Rápidos',
+        contactUs: 'Contáctanos',
+        rights: 'Todos los derechos reservados',
+        privacy: 'Política de Privacidad',
+        terms: 'Términos de Servicio',
+        cookies: 'Política de Cookies'
+      }
+    }
   }
 };
 
