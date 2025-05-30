@@ -220,7 +220,9 @@ const resources = {
           visit: 'Visit Us',
           hours: {
             weekdays: 'Monday - Friday',
+            weekdaysHours: '9:00 AM - 6:00 PM',
             saturday: 'Saturday',
+            saturdayHours: '10:00 AM - 2:00 PM',
             sunday: 'Sunday',
             closed: 'Closed'
           }
@@ -395,7 +397,9 @@ const resources = {
           visit: 'Rendez-nous visite',
           hours: {
             weekdays: 'Lundi - Vendredi',
+            weekdaysHours: '9h00 - 18h00',
             saturday: 'Samedi',
+            saturdayHours: '10h00 - 14h00',
             sunday: 'Dimanche',
             closed: 'Fermé'
           }
