@@ -211,7 +211,11 @@ const resources = {
           submit: 'Send Message',
           success: 'Your message has been sent successfully!',
           error: 'There was an error sending your message. Please try again.',
-          responseTime: 'We typically respond within 24 hours'
+          responseTime: 'We typically respond within 24 hours',
+          required: 'This field is required',
+          invalidEmail: 'Please enter a valid email address',
+          networkError: 'Network error. Please check your connection and try again.',
+          invalidTemplate: 'Email template configuration error. Please contact support.'
         },
         contactMethods: {
           email: 'Email Us',
@@ -380,21 +384,26 @@ const resources = {
         workingHours: 'Heures d\'ouverture',
         sendMessage: 'Envoyez-nous un message',
         form: {
-          name: 'Nom',
-          email: 'Email',
-          phone: 'Téléphone',
+          name: 'Votre nom',
+          email: 'Votre email',
           subject: 'Sujet',
-          message: 'Message',
+          message: 'Votre message',
+          phone: 'Téléphone',
           submit: 'Envoyer le message',
+          sending: 'Envoi en cours...',
           success: 'Votre message a été envoyé avec succès !',
           error: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer.',
-          responseTime: 'Nous répondons généralement dans les 24 heures'
+          responseTime: 'Nous répondons généralement dans les 24 heures',
+          required: 'Ce champ est obligatoire',
+          invalidEmail: 'Veuillez entrer une adresse email valide',
+          networkError: 'Erreur de connexion. Veuillez vérifier votre connexion et réessayer.',
+          invalidTemplate: 'Erreur de configuration du modèle d\'email. Veuillez contacter le support.'
         },
         contactMethods: {
-          email: 'Envoyez-nous un email',
-          whatsapp: 'Contactez-nous via WhatsApp',
-          phone: 'Appelez-nous',
+          email: 'Email',
+          whatsapp: 'Discutez avec nous sur WhatsApp',
           visit: 'Rendez-nous visite',
+          phone: 'Appelez-nous',
           hours: {
             weekdays: 'Lundi - Vendredi',
             weekdaysHours: '9h00 - 18h00',
@@ -655,28 +664,33 @@ const resources = {
         workingHours: 'Horario de Atención',
         sendMessage: 'Envíanos un Mensaje',
         form: {
-          name: 'Nombre',
-          email: 'Correo electrónico',
-          phone: 'Teléfono',
+          name: 'Tu Nombre',
+          email: 'Tu Correo Electrónico',
           subject: 'Asunto',
-          message: 'Mensaje',
-          submit: 'Enviar mensaje',
-          success: '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.',
-          error: 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.',
-          responseTime: 'Normalmente respondemos en 24 horas'
+          message: 'Tu Mensaje',
+          phone: 'Teléfono',
+          submit: 'Enviar Mensaje',
+          sending: 'Enviando...',
+          success: '¡Tu mensaje ha sido enviado con éxito!',
+          error: 'Ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo.',
+          responseTime: 'Normalmente respondemos en menos de 24 horas',
+          required: 'Este campo es obligatorio',
+          invalidEmail: 'Por favor ingrese un correo electrónico válido',
+          networkError: 'Error de red. Por favor verifica tu conexión e inténtalo de nuevo.',
+          invalidTemplate: 'Error de configuración de la plantilla de correo. Por favor contacta al soporte.'
         },
         contactMethods: {
-          email: 'Escríbenos un correo',
-          whatsapp: 'Contáctanos por WhatsApp',
+          email: 'Correo Electrónico',
+          whatsapp: 'Chatea con nosotros por WhatsApp',
           phone: 'Llámanos',
           visit: 'Visítanos',
           hours: {
-            weekdays: 'Lunes a Viernes',
+            weekdays: 'Lunes - Viernes',
+            weekdaysHours: '9:00 AM - 6:00 PM',
             saturday: 'Sábado',
+            saturdayHours: '10:00 AM - 2:00 PM',
             sunday: 'Domingo',
-            closed: 'Cerrado',
-            weekdaysHours: '9:00 - 18:00',
-            saturdayHours: '10:00 - 16:00'
+            closed: 'Cerrado'
           }
         },
         info: {

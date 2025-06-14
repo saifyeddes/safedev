@@ -76,7 +76,7 @@ const InternshipOfferCard: React.FC<InternshipOfferProps> = ({ duration, price, 
           <div className="mt-4 p-3 bg-blue-50 rounded-lg flex items-start">
             <Mail className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
             <div>
-              <p className="font-medium">safe-dev-contact@proton.me</p>
+              <p className="font-medium">safe.dev.contact@gmail.com</p>
               <p className="text-sm text-slate-600">
                 {t('internship.mentionDuration')} {duration} {t('internship.months')}
               </p>

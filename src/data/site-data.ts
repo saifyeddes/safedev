@@ -79,7 +79,7 @@ export const siteConfig = {
     },
   ] as Testimonial[],
   contact: {
-    email: 'safe-dev-contact@proton.me',
+    email: 'safe.dev.contact@gmail.com',
     phone: '+34646112488',
     address: 'Barcelona, Spain',
     prices: {
