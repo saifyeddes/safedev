@@ -1,7 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Section, Badge, Dialog } from '../ui';
-import { Briefcase, Award, FileText, Clock, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Section, Badge } from '../ui';
+import { Briefcase, Award, FileText } from 'lucide-react';
 
 interface InternshipOfferProps {
   duration: string;
@@ -11,14 +12,10 @@ interface InternshipOfferProps {
 
 const InternshipOfferCard: React.FC<InternshipOfferProps> = ({ duration, price, popular = false }) => {
   const { t } = useTranslation();
-  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
+  const navigate = useNavigate();
   
   const handleApplyClick = () => {
-    setIsDialogOpen(true);
-  };
-
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
+    navigate('/careers');
   };
   
   return (
@@ -64,26 +61,6 @@ const InternshipOfferCard: React.FC<InternshipOfferProps> = ({ duration, price, 
           {t('internship.applyNow')}
         </button>
       </div>
-
-      <Dialog
-        isOpen={isDialogOpen}
-        onClose={handleCloseDialog}
-        title={t('internship.applyTitle')}
-      >
-        <div className="space-y-4">
-          <p>{t('internship.applyMessage1')}</p>
-          <p className="font-medium">{t('internship.applyMessage2')}</p>
-          <div className="mt-4 p-3 bg-blue-50 rounded-lg flex items-start">
-            <Mail className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
-            <div>
-              <p className="font-medium">safe.dev.contact@gmail.com</p>
-              <p className="text-sm text-slate-600">
-                {t('internship.mentionDuration')} {duration} {t('internship.months')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </Dialog>
     </>
   );
 };
@@ -99,15 +76,19 @@ export const InternshipOffers: React.FC = () => {
   ];
 
   return (
-    <Section
-      id="offers"
-      className="bg-gradient-to-b from-slate-50 to-white"
-      title={t('internship.title')}
-      subtitle={t('internship.subtitle')}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+    <Section id="internship-offers" className="py-16 md:py-24 bg-slate-50">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+          {t('internship.title')}
+        </h2>
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          {t('internship.subtitle')}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {offers.map((offer, index) => (
-          <InternshipOfferCard
+          <InternshipOfferCard 
             key={index}
             duration={offer.duration}
             price={offer.price}
@@ -115,14 +96,17 @@ export const InternshipOffers: React.FC = () => {
           />
         ))}
       </div>
-      
-      <div className="mt-12 bg-blue-50 p-6 rounded-xl border border-blue-100">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="bg-blue-100 p-3 rounded-full mb-4 md:mb-0 md:mr-4">
-            <Clock className="h-6 w-6 text-blue-600" />
+
+      <div className="mt-12 p-6 bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col md:flex-row items-center justify-between">
+        <div className="flex items-start md:items-center mb-4 md:mb-0">
+          <div className="h-6 w-6 mr-3 mt-1 md:mt-0 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-blue-500">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
           </div>
-          <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold text-slate-800">{t('internship.note.title')}</h4>
+          <div>
+            <h4 className="font-medium text-slate-800">{t('internship.note.title')}</h4>
             <p className="text-slate-600">{t('internship.note.description')}</p>
           </div>
         </div>
