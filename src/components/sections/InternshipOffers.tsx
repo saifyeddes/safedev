@@ -69,10 +69,10 @@ export const InternshipOffers: React.FC = () => {
   const { t } = useTranslation();
   
   const offers = [
-    { duration: '2', price: 200 },
-    { duration: '3', price: 250, popular: true },
-    { duration: '4', price: 400, popular: true },
-    { duration: '6', price: 500 },
+    { duration: '2', price: 250 },
+    { duration: '3', price: 300, popular: true },
+    { duration: '4', price: 450, popular: true },
+    { duration: '6', price: 600 },
   ];
 
   return (

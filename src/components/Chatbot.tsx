@@ -15,10 +15,10 @@ const messages = {
     welcome: () => `Bonjour ! Je suis l'assistant SAFEDEV. Comment puis-je vous aider ?`,
     offers: {
       title: '📋 Nos Offres de Stage',
-      list: '💰 2 mois - 200 TND / mois\n' +
-            '🔥 3 mois - 250 TND / mois (Le plus populaire)\n' +
-            '🔥 4 mois - 400 TND / mois (Le plus populaire)\n' +
-            '💰 6 mois - 500 TND / mois',
+      list: '💰 2 mois - 250 TND / mois\n' +
+            '🔥 3 mois - 300 TND / mois (Le plus populaire)\n' +
+            '🔥 4 mois - 450 TND / mois (Le plus populaire)\n' +
+            '💰 6 mois - 600 TND / mois',
       note: '💡 Toutes les offres incluent une attestation de stage et une expérience pratique'
     },
     team: {
@@ -97,10 +97,10 @@ const messages = {
     welcome: () => `Hello! I'm the SAFEDEV assistant. How can I help you?`,
     offers: {
       title: '📋 Internship Offers',
-      list: '💰 2 months - 200 DT / month\n' +
-            '🔥 3 months - 250 DT / month (Most popular)\n' +
-            '🔥 4 months - 350 DT / month (Most popular)\n' +
-            '💰 6 months - 500 DT / month',
+      list: '💰 2 months - 250 DT / month\n' +
+            '🔥 3 months - 300 DT / month (Most popular)\n' +
+            '🔥 4 months - 450 DT / month (Most popular)\n' +
+            '💰 6 months - 600 DT / month',
       note: '💡 All offers include internship certificate and practical experience'
     },
     team: {

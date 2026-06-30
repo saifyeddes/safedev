@@ -37,25 +37,25 @@ export const siteConfig = {
       name: 'Saif Eddine Yedes',
       role: 'CEO & Co-Founder',
       bio: 'Expert in web development with a proven track record in building scalable web applications. Saif leads our security strategies and ensures all solutions meet the highest industry standards while driving our company\'s vision forward.',
-      image: 'https://media.licdn.com/dms/image/v2/D4E03AQGFpXUPMsNR6w/profile-displayphoto-shrink_800_800/B4EZY_MKwOHgAg-/0/1744816882543?e=1753315200&v=beta&t=EpgMo55UQkvGiYeNp7Cct9AGJ4DyJlBClZxUeBpQDnQ',
+      image: '/saif.jpg',
     },
     {
       name: 'Clara Martínez',
       role: 'UX/UI Designer',
       bio: 'Creative designer with a passion for creating intuitive and beautiful user experiences. Clara brings our projects to life with her design expertise, ensuring both functionality and aesthetics are perfectly balanced.',
-      image: 'https://images.pexels.com/photos/1853101/pexels-photo-1853101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmO6kApLAVn33pF38CsPdT9xURlOMLgbnq_2NLTKchp4XhJBlinDOy8vs&s=10',
     },
     {
       name: 'Daniel Bukin',
       role: 'Operations Manager',
       bio: 'Operations specialist with extensive experience in process optimization and security. Daniel ensures our projects run smoothly and efficiently, maintaining the highest standards of quality and security throughout the development lifecycle.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRijOjK4jabVwbGHoTtpN8GtZ6juttlIvie5Q&s',
+      image: 'https://f4.bcbits.com/img/0041093556_25.jpg',
     },
     {
-      name: 'Chedy Soltani',
+      name: 'Akim Kabinda',
       role: 'IT Leader Developer',
       bio: 'Development expert with deep expertise in complex software architectures. Chedy guides our technical team towards technical excellence and innovation, ensuring our solutions are both robust and cutting-edge.',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQGGETyOkdmFxQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688556104812?e=1753315200&v=beta&t=ynt-aIIiUjFVbu71kzFGiI0QZg6l4IX2lF88B_Zq59s',
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQG10fM_ualq2w/profile-displayphoto-scale_400_400/B4DZwPeRM9IgAg-/0/1769786122734?e=2147483647&v=beta&t=S13zVQmeLmxM8kJSf_VunQ_mNSUXx_MeWPQVZllTOgg',
     },
   ] as TeamMember[],
   testimonials: [
@@ -83,10 +83,10 @@ export const siteConfig = {
     phone: '+34646112488',
     address: 'Barcelona, Spain',
     prices: {
-      twoMonths: '200 TND / mois',
-      threeMonths: '250 TND / mois',
-      fourMonths: '400 TND / mois',
-      sixMonths: '500 TND / mois'
+      twoMonths: '250 TND / mois',
+      threeMonths: '300 TND / mois',
+      fourMonths: '450 TND / mois',
+      sixMonths: '600 TND / mois'
     }
   },
   social: {
